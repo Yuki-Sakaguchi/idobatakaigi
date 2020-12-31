@@ -50,3 +50,21 @@ git push origin HEAD && git checkout main && git merge - && git push origin HEAD
 
 テスト用にログインを飛ばしたい時とかに使ってた。  
 React とかだと json を取得するのが簡単なので便利！
+
+## Icon とかのアバターをハッシュで取得する Gravatar が便利
+
+https://ja.gravatar.com/
+
+```
+import crypto from 'crypto';
+
+/**
+ * Gravatarで使うハッシュを作成する
+ */
+export const gravatarPath = (string) => {
+  const lowerCaseString = string.trim().toLowerCase();
+  const md5 = crypto.createHash('md5');
+  const digest = md5.update(lowerCaseStrin, 'binary').digest('hex');
+  return `https://www.gravatar.com/avatar/${digest}/?d=robohash`;
+};
+```

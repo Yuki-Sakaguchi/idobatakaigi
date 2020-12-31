@@ -5,11 +5,11 @@ import SignIn from './SignIn';
 import config from '../config.json';
 
 export default () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState(!config.signInEnabled ? 'test' : '');
 
-  if (name === '' && config.signInEnabled) {
+  if (name === '') {
     return <SignIn setName={setName} />
   } else {
-    return <Main />
+    return <Main name={name} />
   }
 };
