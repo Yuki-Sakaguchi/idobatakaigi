@@ -125,3 +125,12 @@ npx firebase login
 npx firebase init
 npx firebase deploy
 ```
+
+## ビルドしたやつを確かめる簡単な方法
+
+これで build 内を 8080 で確認できる
+
+```
+cd build
+npx http-server
+```
