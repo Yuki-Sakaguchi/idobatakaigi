@@ -23,3 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 /.bash_history
+
+# firebase
+/.firebase
+/.firebaserc
+/firebase.json

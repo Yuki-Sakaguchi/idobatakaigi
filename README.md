@@ -1,5 +1,9 @@
 # React Starter Kit in TypeScript
 
+## DEMO
+
+https://idobatakaigi-with-ham-48a4f.web.app
+
 ## Node のインストール方法
 
 本アプリケーションは [Node.js](https://nodejs.org/) を前提としています。macOS の場合だと以下の手順で導入できます。Node のバージョンは`.node-version`を参照し、同じものを使用してください。
@@ -97,4 +101,27 @@ IE じゃうごかないけど behavior に smooth を渡すとスムーズな�
 
 ```
 ref.current.scrollIntoView({ behavior: 'smooth' });
+```
+
+## Firebase Hosting すると余計なファイルができるので.gitignore に追加
+
+それぞれ設定やキャッシュの内容なので git には不要
+
+```
+/.firebase
+/.firebaserc
+/firebase.json
+```
+
+## Firebase はグローバルじゃなくてプロジェクトに追加で良い
+
+なるべくグローバルは汚したくないので firebase-tools もプロジェクトで良い  
+その方が全く触ったことない人がこのプロジェクトをクローンした時にも動かしやすい  
+その代わりに実行時には npx をつける
+
+```
+yarn add --dev firebase-tools
+npx firebase login
+npx firebase init
+npx firebase deploy
 ```
