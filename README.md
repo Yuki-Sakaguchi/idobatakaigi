@@ -12,7 +12,7 @@
     $ node -v
     v12.18.4
 
-## アプリケーションの起動方法(Dockerを使用しない場合)
+## アプリケーションの起動方法(Docker を使用しない場合)
 
 本プロジェクトは、[create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) により作成したアプリケーションから React の学習に最低限必要な機能のみを厳選し、軽量化したものです。
 以下の手順でアプリケーションを起動できます。
@@ -23,7 +23,7 @@
     $ yarn install
     $ yarn start
 
-## アプリケーションの起動方法(Dockerを使用する場合)
+## アプリケーションの起動方法(Docker を使用する場合)
 
     $ wget https://github.com/DiveIntoHacking/react-starter-kit-in-javascript-with-node-v12.18.4/archive/v1.1.tar.gz
     $ tar zxvf v1.1.tar.gz
@@ -32,3 +32,10 @@
     $ docker-compose build
     $ docker-compose run --rm app yarn install
     $ docker-compose up
+
+# 勉強したこと
+
+## config.json で設定を外に切り出して振る舞いを帰る
+
+テスト用にログインを飛ばしたい時とかに使ってた。  
+React とかだと json を取得するのが簡単なので便利！
