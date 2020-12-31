@@ -88,3 +88,13 @@ process.env.REACT_APP_FOO
 
 他のコンポーネントで他コンポーネントに直接アクセスしたい時とかにつかう  
 他のボタンが押された時に他の要素にフォーカスが向くようにする時など
+
+## scrollIntoView()
+
+要素がユーザーに見えるところまでスクロールさせる API  
+https://developer.mozilla.org/ja/docs/Web/API/Element/scrollIntoView  
+IE じゃうごかないけど behavior に smooth を渡すとスムーズなアニメーションもできる
+
+```
+ref.current.scrollIntoView({ behavior: 'smooth' });
+```

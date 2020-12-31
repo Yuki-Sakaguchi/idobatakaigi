@@ -35,11 +35,14 @@ const MessageList = () => {
       });
   }, []);
 
+  const len = messages.length;
+
   return (
     <List className={classes.root}>
-      {messages.map(({ key, name, text }) => (
-        <MessageItem key={key} name={name} text={text} />
-      ))}
+      {messages.map(({ key, name, text }, index) => {
+        const isLastItem = len === index+1;
+        return <MessageItem key={key} name={name} text={text} isLastItem={isLastItem} />;
+      })}
     </List>
   );
 };
