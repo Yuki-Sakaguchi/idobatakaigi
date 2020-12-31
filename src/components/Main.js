@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     height: '100vh',
     gridTemplateRows: '1fr auto',
   }
-})
+});
 
 const Main = ({ name }) => {
   const classes = useStyles();
