@@ -68,3 +68,18 @@ export const gravatarPath = (string) => {
   return `https://www.gravatar.com/avatar/${digest}/?d=robohash`;
 };
 ```
+
+## create-react-app の環境変数
+
+`.env`ファイルをつくって`process.env.REACT_APP_*`でアクセスできる  
+`REACT_APP_`は頭に付けないとダメ
+
+```
+REACT_APP_FOO=hello
+```
+
+```
+process.env.REACT_APP_FOO
+```
+
+みたいに使う
