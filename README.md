@@ -35,6 +35,17 @@
 
 # 勉強したこと
 
+## git コマンド
+
+最後のやつとかはワンライナーでブランチ切り替えてマージして push までやっちゃう
+
+```
+git add .
+git diff --cached
+git push origin HEAD
+git push origin HEAD && git checkout main && git merge - && git push origin HEAD
+```
+
 ## config.json で設定を外に切り出して振る舞いを帰る
 
 テスト用にログインを飛ばしたい時とかに使ってた。  
